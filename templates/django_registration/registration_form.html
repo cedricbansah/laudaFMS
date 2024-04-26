@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load tailwind_tags %}
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8">
+  <head>
+    <title>User Registration</title>
+      {% tailwind_css %}
+  </head>
+  <body>
+    <form method="post">
+      {% csrf_token %}
+      {{form}}
+      <input type="submit" value="Submit"/>
+    </form>
+  </body>
+</html>
