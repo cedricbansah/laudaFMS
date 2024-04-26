@@ -33,5 +33,5 @@ def vehicle_info(request, pk):
     context = {'vehicle': vehicle}
     return render(request, 'vehicle_info.html', context)
 
-def create_vehicle(request):
-    # View function to create a new vehicle
+# def create_vehicle(request):
+#     # View function to create a new vehicle

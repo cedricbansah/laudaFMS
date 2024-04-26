@@ -1,5 +1,7 @@
+# Import the views module
 from django.urls import path
-from . import views  # Import the views module
+from lauda import views
+
 
 urlpatterns = [
     path('list_vehicles/', views.list_vehicles, name='list_vehicles'),
