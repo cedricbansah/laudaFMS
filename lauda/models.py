@@ -62,9 +62,9 @@ class Driver(models.Model):
         return f"{self.first_name} {self.last_name} - {self.license_number}"
 
 
-class User(AbstractUser):
-    class Meta(AbstractUser.Meta):
-        swappable = 'AUTH_USER_MODEL'
-
-    def __str__(self):
-        return f"{self.username} {self.email}"
+# class User(AbstractUser):
+#     class Meta(AbstractUser.Meta):
+#         swappable = 'AUTH_USER_MODEL'
+#
+#     def __str__(self):
+#         return f"{self.username} {self.email}"

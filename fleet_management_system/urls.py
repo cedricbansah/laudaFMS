@@ -17,16 +17,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django_registration.backends.one_step.views import RegistrationView
-from lauda.forms import UserForm
 
+from lauda.views.error_view import error_view
+# from lauda.forms import UserForm
+from lauda.views.auth_views import register_user, login
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/',
-         RegistrationView.as_view(
-             form_class=UserForm),
+         register_user,
          name='django_registration_register'),
+    path('login/',
+         login,
+         name='login'),
     path('', include('lauda.urls')),
     path('', include('django_registration.backends.one_step.urls')),
-    path('__reload__/', include('django_browser_reload.urls'))
+    path('__reload__/', include('django_browser_reload.urls')),
+    path('404/', error_view, name="404")
 ]

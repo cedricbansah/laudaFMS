@@ -29,10 +29,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'tailwind',
-    'theme',
-    'django_browser_reload',
-    'django_registration',
+    # 'tailwind',
+    # 'theme',
+    # 'django_browser_reload',
+    # 'django_registration',
     'lauda',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -61,7 +61,7 @@ ROOT_URLCONF = 'fleet_management_system.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
+        'DIRS': []
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -142,9 +142,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # REGISTRATION_API_VIEW_PASSWORD_SALT = os.environ.get('REGISTRATION_SALT')
 
-AUTH_USER_MODEL = 'lauda.User'
+# AUTH_USER_MODEL = 'lauda.User'
 
-TAILWIND_APP_NAME = 'theme'
+# TAILWIND_APP_NAME = 'theme'
 
 INTERNAL_IPS = [
     "127.0.0.1",

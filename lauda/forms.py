@@ -18,5 +18,6 @@ from django_registration.forms import RegistrationForm
 #
 
 class UserForm(RegistrationForm):
+    email = forms.EmailField()
     class Meta(RegistrationForm.Meta):
         model = User
