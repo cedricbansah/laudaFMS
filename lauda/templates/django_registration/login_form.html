@@ -1,0 +1,17 @@
+{#{% extends '../base.html' %}#}
+{#{% load tailwind_tags %}#}
+{#{% tailwind_css %}#}
+    {% block title %}
+        Welcome!
+    {% endblock %}
+
+    {% block content %}
+        <h1>Log In</h1>
+        <form class="login_form" method="post">
+          {% csrf_token %}
+            {{ form }}
+            <button>Log In</button>
+        </form>
+    {% endblock %}
+  </body>
+</html>
